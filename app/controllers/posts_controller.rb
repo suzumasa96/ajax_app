@@ -16,10 +16,10 @@ class PostsController < ApplicationController
     #既読メモidが渡される設定、該当レコードを取得
     post = Post.find(params[:id])
     #既読ならば
-    if post.chcecked
+    if post.checked
       #既読解除の為falseへ変更
       post.update(checked: false)
-          #　↑ActiveRecordのupdateで更新
+          #↑ActiveRecordのupdateで更新
     else
       #既読のためtrueへ変更
       post.update(checked: true)  
